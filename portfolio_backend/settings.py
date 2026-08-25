@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-p@j(693r7)=q@voaxg9$sp1)ofe_t8b&c+$&p#=s$_55ole7w^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,7 +124,8 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-CORS_ALLOWED_ORIGINS = [
+CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
 # Email
