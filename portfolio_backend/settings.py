@@ -1,3 +1,4 @@
+import dj_database_url
 """
 Django settings for portfolio_backend project.
 
@@ -78,10 +79,7 @@ WSGI_APPLICATION = 'portfolio_backend.wsgi.application'
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default='postgresql://neondb_owner:npg_9oMWG1jTDNHZ@ep-restless-fog-ayurmpxn-pooler.c-5.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require')
 }
 
 
@@ -121,6 +119,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 import os
+import dj_database_url
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
